@@ -1,0 +1,21 @@
+#content{
+    width:824px;
+    height:600px;
+    margin:-200px auto 0px auto;
+    background:transparent url(bg.gif) no-repeat bottom left;
+}
+#content h1{
+    color:#7F6137;
+    text-shadow:1px 1px 1px #fff;
+}
+#content p{
+    margin:20px;
+    width:600px;
+}
+#content .text{
+    padding:300px 0px 0px 100px;
+}
+
+h1{
+  color: red;
+}

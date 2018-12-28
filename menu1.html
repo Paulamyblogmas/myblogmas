@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Smart Bottom Slide Out Menu</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="description" content="Smart Bottom Slide Out Menu" />
+  <meta name="keywords" content="jquery, fancy, bottom, navigation, menu" />
+  <link rel="stylesheet" href="style1.css" type="text/css" media="screen"/>
+</head>
+
+<body>
+  <div id="header"></div>
+  <div id="about" class="text" style="display:none;">
+    <!-- Write your content here -->
+  </div>
+
+
+  <div id="content">
+    <div id="home" class="text">
+
+      <h1 style="background-color:pink;">Sentadillas</h1>
+      <img src="sentadilla.jpg" alt="1">
+        <h2>¿Cuales son los beneficios?</h2>
+        <p>
+      </div>
+      <div id="about" class="text" style="display:none;">
+
+      </div>
+      <div id="home1" class="text" style="display:none;">
+      </div>
+      <div id="dieta" class="text" style="display:none;">
+        <h1><button type="button" class="btn btn-secondary btn-lg btn-block">Ejercicos para ejercitar los cuadriceps</button></h1>
+        <p>This is an example of some text!</p>
+        <p><label for="searchinput">Search for:</label><input type="text"/></p>
+      </div>
+      <div id="ejercicios" class="text" style="display:none;">
+        <button type="button" class="btn btn-secondary btn-lg btn-block">Ejercicios para glúteos</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block">Ejercicos para ejercitar biceps</button>
+        <img src="https://laguiadelasvitaminas.com/wp-content/uploads/2017/06/musculos-posteriores-de-la-pierna.jpg" width=20%>
+        <button type="button" class="btn btn-secondary btn-lg btn-block">Ejercicos para ejercitar los cuadriceps</button>
+        <table style="width:100%;border: 1px solid black;">
+          <tr style="background-color: grey;">
+            <th style="border: 1px solid black;">Gemelos</th>
+            <th style="border: 1px solid black;">Lastname</th>
+            <th style="border: 1px solid black;">Age</th>
+            <th style="border: 1px solid black;">Age</th>
+            <th style="border: 1px solid black;">Age</th>
+            <th style="border: 1px solid black;">Age</th>
+          </tr>
+          <tr style="background-color: pink">
+            <td style="border: 1px solid black;">Estos ejercicios son para se gdfg sf gsef er gse ger gergfseggs t</td>
+            <td style="border: 1px solid black;">Smith sdf sdf sdf sdf sdf sd fs fs df sdf s</td>
+            <td style="border: 1px solid black;">50</td>
+            <td style="border: 1px solid black;">50</td>
+            <td style="border: 1px solid black;">50</td>
+            <td style="border: 1px solid black;">50</td>
+          </tr>
+        </table>
+
+      </div>
+      <div id="contact" class="text" style="display:none;">
+        <h1>Si tiene alguna duda sobre nutrición o sobre las recetas o dietas que se citan en este blog le dejo el email de una nurticionista:</h1>
+        <p></p>
+        <h2>Si tiene alguna duda sobre los ejercicos que aparecen en el blog puede contactar con un coach y le dara consejos sobre como llevarlosa cabo segun como seas</h2>
+      </div>
+    </div>
+    <ul id="navigation">
+      <li class="home1"><a href="menu.html" title="Home" >Home</a></li>
+      <li class="looks"><a title="looks">Looks</a></li>
+      <li class="dieta"><a title="dieta">Dieta</a></li>
+      <li class="ejercicios"><a title="ejercicios">Ejercicios</a></li>
+      <li class="contact"><a title="Contact">Contact</a></li>
+    </ul>
+
+    <div class="info">
+      <a class="back" href="">Paula</a>
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+      var d=300;
+      $('#navigation a').each(function(){
+        var $this = $(this);
+        var r=Math.floor(Math.random()*41)-20;
+        $this.css({'-moz-transform':'rotate('+r+'deg)','-webkit-transform':'rotate('+r+'deg)','transform':'rotate('+r+'deg)'});
+        $('#content').css({'-moz-transform':'rotate('+r+'deg)','-webkit-transform':'rotate('+r+'deg)','transform':'rotate('+r+'deg)'});
+        $this.stop().animate({
+          'marginTop':'-70px'
+        },d+=150);
+      });
+      $('#navigation > li').hover(
+        function () {
+          var $this = $(this);
+          $('a',$this).stop().animate({
+            'marginTop':'-40px'
+          },200);
+        },
+        function () {
+          var $this = $(this);
+          $('a',$this).stop().animate({
+            'marginTop':'-70px'
+          },200);
+        }
+      ).click(function(){
+        var $this = $(this);
+        var name = this.className;
+        $('#content').animate({marginTop:-600}, 300,function(){
+          var $this = $(this);
+          var r=Math.floor(Math.random()*41)-20;
+          r=0
+          $this.css({'-moz-transform':'rotate('+r+'deg)','-webkit-transform':'rotate('+r+'deg)','transform':'rotate('+r+'deg)'});
+          $('#content div').hide();
+          $('#'+name).show();
+          $this.animate({marginTop:-200}, 300);
+        })
+      });
+    });
+    </script>
+  </body>
+  </html>
